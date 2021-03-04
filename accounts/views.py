@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse('Homepage')
-def customers(request):
-    return HttpResponse('Customers')
-def products (request):
-    return HttpResponse('Products')
-
 # Create your views here.
+
+def home(request):
+	return render(request, 'accounts/dashboard.html')
+def products(request):
+	return render(request, 'accounts/products.html')
+def customers(request):
+	return render(request, 'accounts/customers.html')
